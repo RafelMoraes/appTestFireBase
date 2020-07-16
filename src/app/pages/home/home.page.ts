@@ -13,7 +13,7 @@ import { AlertController } from '@ionic/angular';
 export class HomePage implements OnInit {
   [x: string]: any;
 
-  public agenda: Agendamento;
+  public agenda: Agendamento = { };
 
   constructor(private agendamentoservice: AgendamentosService, public alertCtrl: AlertController ) { }
 
@@ -32,6 +32,7 @@ export class HomePage implements OnInit {
     });
 
   }
+
 
   ngOnInit() {
   }

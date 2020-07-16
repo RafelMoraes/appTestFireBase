@@ -1,7 +1,7 @@
 export class Agendamento{
-    $key: string;
-    tipoCorte: string;
-    data: Date;
-    hora: string;
-    profissional: string;
+    $key?: string;
+    data?: Date;
+    hora?: string;
+    profissional?: string;
+    tipoCorte?: string;
 }

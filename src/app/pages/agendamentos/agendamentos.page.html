@@ -5,21 +5,21 @@
 </ion-header>
 
 <ion-content>
-  <ion-item-sliding *ngFor="let agendamentos of listaAgendamentos">
-    <ion-item lines="full">
+  <ion-item-sliding *ngFor="let Agendamento of listaAgendamentos">
+    <ion-item>
       <ion-label>
         <div>
           <p>
-            {{agendamentos.data}}
+            {{Agendamento.data}}
           </p>
           <p>
-            {{agendamentos.hora}}
+            {{Agendamento.hora}}
           </p>
           <p>
-            {{agendamentos.profissional}}
+            {{Agendamento.profissional}}
           </p>
           <p>
-            {{agendamentos.tipoCorte}}
+            {{Agendamento.tipoCorte}}
           </p>
         </div>
 
