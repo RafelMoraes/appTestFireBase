@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agendamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-img src="\assets\icon\logo.png"></ion-img>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Selecione a data: </ion-label>
+      <ion-datetime monthValues="1,2,3,4,5,6,7,8,9,10,11,12" yearValues="2020,2021" displayFormat="DD/MM/YY"
+        [(ngModel)]="agenda.data">
+      </ion-datetime>
+    </ion-item>
+
+    <br>
+
+    <ion-item>
+      <ion-label>Selecione a hora: </ion-label>
+      <ion-datetime display-format="HH:mm" picker-format="HH:mm" [(ngModel)]="agenda.hora">
+      </ion-datetime>
+    </ion-item>
+
+    <br>
+
+    <ion-item>
+      <ion-label>Profisisonal:</ion-label>
+      <ion-select interface="popover" [(ngModel)]="agenda.profissional">
+        <ion-select-option value="ValTenis">ValTenis</ion-select-option>
+        <ion-select-option value="Pafuncio">Pafuncio</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <br>
+
+    <ion-item>
+      <ion-label>Tipo De Corte: </ion-label>
+      <ion-select interface="popover" [(ngModel)]="agenda.tipoCorte">
+        <ion-select-option value="Corte silmples">Corte silmples</ion-select-option>
+        <ion-select-option value="Corte c/ Navalha">Corte c/ Navalha</ion-select-option>
+        <ion-select-option value="Corte + Barba">Corte + Barba</ion-select-option>
+        <ion-select-option value="Corte c/ Navalha + Barba">Corte c/ Navalha + Barba </ion-select-option>
+        <ion-select-option value="Platinado">Platinado</ion-select-option>
+        <ion-select-option value="Luzes">Luzes</ion-select-option>
+        <ion-select-option value="Progressiva">Progressiva</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" color="danger" type="submit" (click)="agendar()">Salvar</ion-button>
+
+    <br>
+
+
+
+  </ion-card>
+
+</ion-content>
