@@ -16,7 +16,7 @@ export class AgendamentosPage implements OnInit {
   public buscarAgenda() {
     this.listaAgendamentos = [];
 
-    this.agendamentoService.getAll().subscribe(dados => [
+    this.agendamentoService.getAll().subscribe(dados => {
       this.listaAgendamentos = dados.map(registro => {
         console.log(registro);
         return {
@@ -27,11 +27,11 @@ export class AgendamentosPage implements OnInit {
           tipoCorte: registro.payload.doc.data()['tipoCorte']
         } as Agendamento;
       })
-    ]);
+    });
     
   }
 
-  async ionViewwillEnter() {
+  async ionViewWillEnter() {
     await this.buscarAgenda();
   }
   
